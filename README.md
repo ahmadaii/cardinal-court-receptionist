@@ -9,9 +9,11 @@ A LiveKit voice agent acting as the front desk for Cardinal Court, 120 Southwark
 | | |
 |---|---|
 | **▶ 30-second recording** | Drop a Loom or GIF link here before sending. |
-| **↗ Live URL** | Paste the deployed URL here before sending. |
+| **↗ Live URL** | https://cardinal-court-receptionist.vercel.app |
 
-*Left empty on purpose — these are the two highest-signal items. Fill both before handback.*
+*Recording still to add before handback.*
+
+**Before you test it:** give it a couple of seconds to connect after clicking "Start call" — the agent has to be dispatched into the room. Best tested in Chrome.
 
 ---
 
@@ -57,6 +59,25 @@ Correctness on the golden set: **13/13 = 1.00**, including three graceful-failur
 Known failure modes:
 - **ASR errors not caught.** The eval is text-only. Deepgram mishearing "Kiln" as "kill" or "Loom" as "room" bypasses the confirm-before-directing guardrail in the prompt. Would need voice-round-trip eval or ASR confusion testing to lock in.
 - **Substring metric only.** A verbose answer scores the same as a tight one. Tone and conciseness are not measured.
+
+---
+
+## What I'd improve with more time
+
+- **The `/api/token` route has no auth layer.** It's LiveKit's own starter template, which deliberately throws in production unless you add one — I removed that guard to get a working public demo link, which is the right tradeoff for this exercise (no real users, no cost at risk) but not for production. With more time: a lightweight auth/rate-limit layer in front of token minting, or LiveKit Cloud's sandbox token flow.
+- **ASR confusion on tenant names isn't tested.** "Loom" → "lune", "Kiln" → "kill" — the eval set is text-only, so these failure modes aren't caught. Would need a voice-round-trip eval or explicit ASR confusion test cases.
+- **MCP server for the building data**, instead of baking it into the prompt — cleaner architecture, independently testable, and the direction LiveKit's SDK is heading. Deferred because the fact pack is small enough that in-context grounding is the right call for V1.
+- **RAG + retrieval evaluation** — only worth it if the fact pack grows past prompt-context size; deferred for the same reason.
+- **Telephony (LiveKit SIP), multi-language, fuller traces/eval set** — all brief stretch goals, none required for the core build.
+
+## Roughly where the time went
+
+~3 hours, in line with the brief's time box:
+- Planning + LiveKit Cloud setup + credentials: ~25 min
+- Grounding (YAML knowledge base, system prompt, refusal/multi-fact behaviour, `lookup_tenant` tool): ~45 min
+- Testing pass against the fact pack's sample questions, including the awkward refusal cases: ~30 min
+- Deployment (agent worker → LiveKit Cloud, frontend → Vercel, end-to-end verification): ~40 min
+- Evals (`golden.yaml` + pytest) and this README: ~25 min
 
 ---
 
