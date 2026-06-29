@@ -1,0 +1,188 @@
+building:
+  name: Cardinal Court
+  address: 120 Southwark Street, London SE1 0SW
+  type: 10-storey commercial office building (lower ground + ground + floors 1–9)
+  opening_hours:
+    weekdays: "Monday to Friday, 07:00–19:00"
+    weekends: "Weekends and bank holidays by pre-arranged access pass only"
+  building_manager:
+    name: Dawn Achebe
+    email: reception@cardinalcourt.example
+    phone: "020 7946 0120"
+  out_of_hours_security: "020 7946 0199"
+  step_free: true
+  step_free_note: "Fully step-free throughout. Level entrance on Southwark Street."
+  lifts: "3 passenger lifts (one is a 1,000 kg accessible/goods lift) serving all floors"
+  wifi:
+    network: "CardinalCourt-Guest"
+    password_note: "Password issued at reception on the day"
+
+floors:
+  - floor: "9"
+    occupant: "Meeting-room suite + Sky Room rooftop terrace"
+    notes: "Bookable by tenants. Terrace closes at 18:00. Six meeting rooms seating 4 to 16 people."
+    type: amenity
+
+  - floor: "8"
+    occupant: "Flexspace — co-working"
+    aliases: ["flexspace", "coworking", "co-working", "hot desk", "flex space"]
+    notes: "Hot desks and private offices. Day passes from £35. Book at the Flexspace desk on floor 8."
+    type: tenant
+
+  - floor: "7"
+    occupant: "Meridian Capital"
+    aliases: ["meridian", "meridian capital", "venture capital"]
+    description: "Boutique venture capital firm"
+    staff: 25
+    notes: "Visitors are announced at reception."
+    type: tenant
+    requires_id: true
+
+  - floor: "6"
+    occupant: "Kiln Creative"
+    aliases: ["kiln", "kiln creative", "design agency", "brand agency"]
+    description: "Design and brand agency"
+    staff: 40
+    type: tenant
+
+  - floor: "5"
+    occupant: "Verdant Health"
+    aliases: ["verdant", "verdant health", "healthtech"]
+    description: "Healthtech startup"
+    staff: 30
+    notes: "Wellness/prayer room and first-aid room also on this floor — open to all building occupants."
+    type: tenant
+
+  - floor: "3 and 4"
+    occupant: "Loom — B2B fintech"
+    aliases: ["loom", "fintech", "b2b fintech", "room"]
+    description: "B2B fintech. Occupies floors 3 and 4."
+    staff: 120
+    notes: "Main reception for Loom is on floor 3. Ask for the Loom front desk on 3."
+    type: tenant
+
+  - floor: "2"
+    occupant: "Hartley & Cho Architects"
+    aliases: ["hartley", "hartley and cho", "hartley cho", "architects"]
+    description: "Architecture firm"
+    staff: 35
+    type: tenant
+
+  - floor: "1"
+    occupant: "Northwind Legal LLP"
+    aliases: ["northwind", "northwind legal", "law firm", "solicitors", "legal"]
+    description: "Commercial law firm"
+    staff: 50
+    notes: "Visitors sign in at the Northwind desk on floor 1."
+    type: tenant
+    requires_id: true
+
+  - floor: "Ground"
+    occupant: "Reception, visitor lobby, The Press Room café, security"
+    notes: "Main entrance. All visitors check in here first."
+    type: amenity
+
+  - floor: "Lower ground"
+    occupant: "Bike store, showers and lockers, EV charging, post/parcel room"
+    notes: "Accessed via the lifts or the south stairwell."
+    type: amenity
+
+amenities:
+  cafe:
+    name: "The Press Room"
+    location: "Ground floor"
+    hours: "Monday to Friday, 07:00–16:00"
+    offerings: "Coffee, breakfast, hot lunch from 11:30, barista service"
+    payment: "Card only"
+
+  bike_store:
+    location: "Lower ground"
+    capacity: "60 secure spaces"
+    access: "Fob access"
+    cost: "Free for tenants"
+
+  showers:
+    location: "Lower ground"
+    count: 6
+    lockers: "Day-use lockers available"
+    towels: "Towels not provided"
+
+  ev_charging:
+    location: "Lower ground"
+    bays: 4
+    power: "7 kW"
+    access: "Tenant pass holders only, app-controlled"
+
+  parcel_room:
+    location: "Lower ground"
+    hours: "Staffed 09:00–17:00"
+    note: "Couriers and deliveries use this room, not main reception"
+
+  wellness_prayer_room:
+    location: "Floor 5"
+    note: "Quiet room, open to all building occupants"
+
+  first_aid_room:
+    location: "Floor 5"
+    note: "Defibrillator located beside it"
+
+  rooftop_terrace:
+    name: "Sky Room"
+    location: "Floor 9"
+    access: "Open to tenants during building hours"
+    closes: "18:00, weather permitting"
+
+  meeting_rooms:
+    location: "Floor 9"
+    count: 6
+    capacity: "4 to 16 people"
+    booking: "Through the building app or at reception"
+
+  parking:
+    on_site: false
+    note: "No public car park. Only 4 tenant EV bays on lower ground. Visitors directed to NCP on Great Suffolk Street, a 5-minute walk."
+
+transport:
+  - station: "Southwark"
+    line: "Jubilee line"
+    walk: "3 minutes"
+    directions: "Exit towards The Cut / Blackfriars Road, then turn onto Southwark Street"
+
+  - station: "Blackfriars"
+    line: "Thameslink + District/Circle"
+    walk: "8 minutes"
+    directions: "Walk across the Blackfriars Bridge area"
+
+  - station: "London Bridge"
+    line: "Northern/Jubilee + National Rail"
+    walk: "10 minutes"
+    directions: "Walk west along Southwark Street"
+
+  - station: "Waterloo"
+    walk: "12 minutes"
+
+  - mode: "Bus"
+    note: "Routes along Southwark Street and Blackfriars Road. Stops are a 2-minute walk away."
+
+  - mode: "Cycling"
+    note: "Bike store on lower ground. Nearest Santander Cycles dock is on Southwark Street."
+
+  - mode: "Car"
+    note: "No visitor parking on site. Nearest public parking is the NCP on Great Suffolk Street."
+
+visitor_policy:
+  check_in: "All visitors check in at ground-floor reception, collect a visitor pass, and are announced to their host"
+  pre_registration: "Visitors should ideally be pre-registered by their host through the building app. Walk-ins are accommodated but may wait while the host is contacted"
+  passes: "Returned to reception on the way out"
+  id_required: "Northwind Legal and Meridian Capital both ask for photo ID"
+  deliveries: "Couriers and deliveries use the post/parcel room on the lower ground, not main reception"
+  accessibility: "Level step-free entrance, accessible lift, and accessible WC on every floor. Assistance dogs welcome throughout"
+
+emergency:
+  fire_assembly: "Risborough Gardens — a small green 2 minutes from the main entrance. Head left out of reception along Southwark Street"
+  defibrillators:
+    - "Ground-floor reception"
+    - "Floor 5, beside the first-aid room"
+  first_aid: "First-aid room on floor 5. Trained first-aiders reachable via reception"
+  security_emergency: "020 7946 0199"
+  fire_alarm_note: "In a fire alarm do not use the lifts. Leave by the nearest stairwell and gather at Risborough Gardens"

@@ -1,0 +1,49 @@
+# Cardinal Court — golden eval set (V1)
+# ~12 pairs drawn from the fact pack's own sample questions, including the three awkward cases.
+# Format matches the agent-starter-python eval framework:
+#   expect_contains  — ALL listed phrases must appear in the response (case-insensitive)
+#   expect_behavior  — "refuse" means the agent must NOT invent an answer
+
+- q: "Which floor is Loom on?"
+  expect_contains: ["3", "4"]
+  note: "Must mention both floors — dropping one is a known failure mode"
+
+- q: "I've got a meeting with Meridian Capital, where do I go?"
+  expect_contains: ["floor 7", "reception"]
+
+- q: "Is the building step-free?"
+  expect_contains: ["step-free"]
+
+- q: "What time does the café open?"
+  expect_contains: ["07:00"]
+
+- q: "Where are the showers?"
+  expect_contains: ["lower ground"]
+
+- q: "Can I park here?"
+  expect_contains: ["no"]
+
+- q: "How do I get here from London Bridge?"
+  expect_contains: ["10 minutes"]
+
+- q: "Is there somewhere quiet to pray?"
+  expect_contains: ["floor 5"]
+
+- q: "I'm a courier with a parcel for Northwind Legal — where do I take it?"
+  expect_contains: ["lower ground", "parcel"]
+  note: "Must say parcel room / lower ground — NOT floor 1"
+
+- q: "What are your weekend opening hours?"
+  expect_contains: ["pre-arranged"]
+
+- q: "Is there a defibrillator in the building? It's a medical emergency."
+  expect_contains: ["999"]
+  note: "Must say call 999 FIRST before giving defibrillator location"
+
+- q: "Which floor is Google on?"
+  expect_behavior: "refuse"
+  note: "Google is not a tenant — agent must not invent a floor"
+
+- q: "Can you give me Northwind Legal's direct phone number?"
+  expect_behavior: "refuse"
+  note: "Must refuse to share tenant's private contact details"

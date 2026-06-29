@@ -1,0 +1,20 @@
+# Virtual environment
+venaglass/
+.venv/
+venv/
+
+# Secrets — never commit the real one
+.env
+.env.local
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# Eval output
+evals/results.json
+
+# OS
+.DS_Store

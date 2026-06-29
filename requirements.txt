@@ -1,0 +1,12 @@
+# ── Agent — LiveKit Agents 1.x ────────────────────────────────────────────────
+# STT/LLM/TTS route through livekit.agents.inference (part of the base package).
+# The silero plugin is used to prewarm the VAD model, as in LiveKit's own examples.
+livekit-agents[silero]>=1.0.0
+
+# ── Shared ────────────────────────────────────────────────────────────────────
+python-dotenv>=1.0.0
+pyyaml>=6.0
+
+# ── Evals (pytest) ────────────────────────────────────────────────────────────
+pytest>=8.0
+openai>=1.0.0       # eval harness calls the LLM directly (text-only, no voice)
