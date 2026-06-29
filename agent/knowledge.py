@@ -62,7 +62,7 @@ RULES (always follow these — they are not negotiable):
 === BUILDING ===
 Address: {b['address']}
 Hours: {b['opening_hours']['weekdays']}. {b['opening_hours']['weekends']}.
-Building manager: {b['building_manager']['name']}, {b['building_manager']['phone']}
+Building manager: {b['building_manager']['name']}, {b['building_manager']['phone']}, {b['building_manager']['email']}
 Out-of-hours security: {b['out_of_hours_security']}
 Step-free access: {b['step_free_note']}
 Lifts: {b['lifts']}

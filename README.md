@@ -4,6 +4,17 @@ A LiveKit voice agent acting as the front desk for Cardinal Court, 120 Southwark
 
 ---
 
+## Handback checklist
+
+- [x] LiveKit voice agent (speech-in/out), deployed to LiveKit Cloud, auto-dispatch
+- [x] Reachable from a public URL (Vercel)
+- [x] Grounded in the Cardinal Court fact pack, with refusal behaviour
+- [x] Public GitHub repo with README (how to run / what was used / what I'd improve / time spent)
+- [ ] **Manually voice-tested end to end on the live URL** (mic in, speaker out) — do this before sending to Nathan
+- [ ] Demo recording (optional — brief doesn't require it, left as a nice-to-have)
+
+---
+
 ## Demo
 
 | | |
