@@ -19,7 +19,7 @@ A LiveKit voice agent acting as the front desk for Cardinal Court, 120 Southwark
 
 | | |
 |---|---|
-| **▶ Demo recording** | [Watch on Google Drive](https://drive.google.com/file/d/1Pn6_YPAIdYhBZgRMNHjuphJ4EzJpYf9w/view?usp=sharing) |
+| **▶ Demo recording** | [![Demo preview](https://drive.google.com/thumbnail?id=1Pn6_YPAIdYhBZgRMNHjuphJ4EzJpYf9w&sz=w400)](https://drive.google.com/file/d/1Pn6_YPAIdYhBZgRMNHjuphJ4EzJpYf9w/view?usp=sharing) |
 | **↗ Live URL** | https://cardinal-court-receptionist.vercel.app |
 
 **Before you test it:** give it a couple of seconds to connect after clicking "Start call" — the agent has to be dispatched into the room. Best tested in Chrome.
