@@ -11,7 +11,7 @@ A LiveKit voice agent acting as the front desk for Cardinal Court, 120 Southwark
 - [x] Grounded in the Cardinal Court fact pack, with refusal behaviour
 - [x] Public GitHub repo with README (how to run / what was used / what I'd improve / time spent)
 - [ ] **Manually voice-tested end to end on the live URL** (mic in, speaker out) — do this before sending to Nathan
-- [ ] Demo recording (optional — brief doesn't require it, left as a nice-to-have)
+- [x] Demo recording (Google Drive)
 
 ---
 
@@ -19,10 +19,8 @@ A LiveKit voice agent acting as the front desk for Cardinal Court, 120 Southwark
 
 | | |
 |---|---|
-| **▶ 30-second recording** | Drop a Loom or GIF link here before sending. |
+| **▶ Demo recording** | [Watch on Google Drive](https://drive.google.com/file/d/1Pn6_YPAIdYhBZgRMNHjuphJ4EzJpYf9w/view?usp=sharing) |
 | **↗ Live URL** | https://cardinal-court-receptionist.vercel.app |
-
-*Recording still to add before handback.*
 
 **Before you test it:** give it a couple of seconds to connect after clicking "Start call" — the agent has to be dispatched into the room. Best tested in Chrome.
 
